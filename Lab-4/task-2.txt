@@ -1,0 +1,5 @@
+ip route 0.0.0.0 0.0.0.0 se0/0/0
+ip route 0.0.0.0 0.0.0.0 se0/0/1 5
+int se0/0/0
+shut
+ipv6  route ::/0 2001:DB8:A:2::1 5

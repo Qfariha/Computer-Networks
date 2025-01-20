@@ -1,0 +1,41 @@
+
+R1>en
+R1#conf t
+router rip
+version 2
+no auto-summary
+network 192.168.1.0
+network 192.168.2.0	
+passive-interface g0/0
+default-information originate
+R1#
+R1#show ip route
+
+
+
+R2>en
+R2#conf t
+router rip
+version 2
+no au
+no auto-summary
+network 192.168.2.0
+network 192.168.3.0
+network 192.168.4.0
+passive-interface g0/0
+default-information originate
+
+
+
+R3>en
+R3#conf t
+
+router rip
+version 2
+no auto-summary
+network 192.168.5.0
+passive-interface se0/0/1
+default-information originate
+network 192.168.4.0
+passive-interface gig0/0
+default-information originate
